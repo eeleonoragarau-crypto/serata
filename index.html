@@ -417,6 +417,7 @@ a{color:inherit}
         <div><dt>Dal vivo</dt><dd>Espresso Doppio<span>Giuseppe Antonacci, voce e chitarra · Luigi Leoni, chitarra</span></dd></div>
       </dl>
       <div class="i-ctas">
+        <a class="cta solid" id="rsvpForm" href="https://forms.gle/w7vQTcEaVNXJcEpt6" target="_blank" rel="noopener">Confermi la tua partecipazione</a>
         <button class="cta" id="enter">Scopri di più sulla serata
           <svg width="22" height="12" viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 6h20M15 1l5 5-5 5"/></svg>
         </button>
@@ -597,7 +598,7 @@ a{color:inherit}
     <div class="stub"><small>Vol.</small><b>01</b><i>Ed. speciale</i></div>
   </div>
   <div class="acts">
-    <a class="act rsvp nofl" id="rsvpLink" href="#" target="_blank" rel="noopener"><span class="n">→</span><span><b>Conferma la tua presenza</b><small>Scrivi a accrediti@lobitz.it</small></span><span class="go">✉</span></a>
+    <a class="act rsvp nofl" id="rsvpLink" href="#" target="_blank" rel="noopener"><span class="n">→</span><span><b>Confermi la tua partecipazione</b><small>Compila il modulo online, bastano pochi secondi</small></span><span class="go">✉</span></a>
     <div class="mailrow nofl"><code>accrediti@lobitz.it</code><button id="copyMail">Copia indirizzo</button></div>
     <a class="act nofl" id="calLink" href="#" target="_blank" rel="noopener"><span class="n">II</span><span><b>Aggiungi al calendario</b><small>Google Calendar · sabato 28 novembre, ore 19:30</small></span><span class="go">↗</span></a>
     <a class="act nofl" id="mapLink" href="#" target="_blank" rel="noopener"><span class="n">III</span><span><b>Come arrivare</b><small>Via dell’Aprica, 10 · apri in Maps</small></span><span class="go">↗</span></a>
@@ -871,7 +872,7 @@ syncQuiz();
 /* ---------- info: links, countdown ---------- */
 const subj="RSVP · Espresso Doppio · 28 novembre 2026"+(guest?" · "+guest:"");
 const bodyTxt=`Gentile Lobiz,\n\nconfermo la mia partecipazione alla serata con Espresso Doppio, sabato 28 novembre 2026 alle 19:30 alla Trattoria Bel Belè.\n\n${guest||"Nome e cognome:"}\nNumero di persone: `;
-$("#rsvpLink").href=`mailto:accrediti@lobitz.it?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(bodyTxt)}`;
+$("#rsvpLink").href="https://forms.gle/w7vQTcEaVNXJcEpt6";
 $("#calLink").href="https://calendar.google.com/calendar/render?action=TEMPLATE"+
   "&text="+encodeURIComponent("Espresso Doppio live · Lobiz Magazine")+
   "&dates=20261128T183000Z/20261128T213000Z"+

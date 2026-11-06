@@ -26,3 +26,8 @@ La pagina mostrerà "hanno il piacere di invitare **Marco Rossi**", il timbro "R
 ## Modificare i testi
 Tutti i testi sono in `index.html`: cerca la frase da cambiare e sostituiscila.
 L'orario del conto alla rovescia è in `Date.UTC(2026,10,28,18,30,0)` (ora UTC: 18:30 UTC = 19:30 a Milano).
+
+## Conferma della partecipazione
+Il bottone "Confermi la tua partecipazione" (nella pagina d'arrivo e a pagina 06) apre il Google Form:
+https://forms.gle/w7vQTcEaVNXJcEpt6
+Per cambiarlo, cerca questo indirizzo in `index.html` e sostituiscilo.
