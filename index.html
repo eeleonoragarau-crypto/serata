@@ -40,13 +40,13 @@ a{color:inherit}
 /* ---------- intro / landing ---------- */
 #intro{position:fixed;inset:0;z-index:20;color:#efe7d7;display:flex;flex-direction:column;transition:opacity .9s ease, transform 1.1s cubic-bezier(.7,0,.2,1)}
 #intro.leaving{opacity:0;transform:scale(1.04);pointer-events:none}
-.i-top{display:flex;justify-content:space-between;align-items:center;padding:22px clamp(18px,4vw,48px);font-size:11px;letter-spacing:.32em;text-transform:uppercase;opacity:.75}
+.i-top{display:flex;justify-content:space-between;align-items:center;padding:18px clamp(18px,4vw,48px);font-size:11px;letter-spacing:.32em;text-transform:uppercase;opacity:.75}
 .i-top b{font-family:var(--display);font-weight:600;letter-spacing:.02em;font-size:17px;text-transform:uppercase;opacity:1}
 .i-main{flex:1;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:clamp(20px,4vw,70px);padding:0 clamp(18px,6vw,96px);min-height:0}
 .i-copy{max-width:640px}
 .eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#d9cdb7}
 .eyebrow::before{content:"";width:34px;height:1px;background:currentColor;opacity:.6}
-.i-title{font-family:var(--display);font-weight:400;font-size:clamp(40px,5.4vw,84px);line-height:.95;letter-spacing:-.02em;margin:10px 0 26px}
+.i-title{font-family:var(--display);font-weight:400;font-size:clamp(38px,min(5vw,8.5vh),80px);line-height:.95;letter-spacing:-.02em;margin:8px 0 20px}
 .i-title em{font-style:italic;font-weight:500}
 .i-title .ln{display:block;overflow:hidden}
 .i-title .ln span{display:inline-block;transform:translateY(105%);animation:rise 1.1s cubic-bezier(.2,.8,.2,1) forwards}
@@ -58,7 +58,7 @@ a{color:inherit}
 .i-meta span{display:flex;align-items:center;gap:10px}
 .i-meta span+span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--red)}
 @keyframes fade{to{opacity:1}}
-.cta{display:inline-flex;align-items:center;gap:16px;padding:18px 28px 18px 30px;border:1px solid rgba(239,231,215,.5);border-radius:999px;font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:#f3ead9;position:relative;overflow:hidden;opacity:0;animation:fade 1s 1s forwards;transition:color .4s, border-color .4s}
+.cta{display:inline-flex;align-items:center;gap:14px;padding:16px 24px 16px 26px;border:1px solid rgba(239,231,215,.5);border-radius:999px;font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:#f3ead9;position:relative;overflow:hidden;opacity:0;animation:fade 1s 1s forwards;transition:color .4s, border-color .4s}
 .cta::before{content:"";position:absolute;inset:0;background:#efe7d7;transform:translateY(101%);transition:transform .5s cubic-bezier(.7,0,.2,1);z-index:-1}
 .cta{z-index:0}
 .cta:hover{color:var(--ink);border-color:#efe7d7}.cta:hover::before{transform:none}
@@ -81,10 +81,10 @@ a{color:inherit}
 
 #intro{overflow-y:auto;overflow-x:hidden}
 .i-main{flex:1 0 auto}
-.i-host{font-style:italic;font-size:clamp(16px,1.4vw,19px);line-height:1.45;color:#d8ccb6;margin-top:18px;opacity:0;animation:fade 1s .2s forwards}
+.i-host{font-style:italic;font-size:clamp(15px,1.3vw,18px);line-height:1.4;color:#d8ccb6;margin-top:12px;opacity:0;animation:fade 1s .2s forwards}
 .i-host b{font-family:var(--display);font-weight:600;color:#f3ead9;font-size:1.12em}
-.i-card{border-top:1px solid rgba(239,231,215,.35);margin:0 0 26px;opacity:0;animation:fade 1s .7s forwards;max-width:600px}
-.i-card>div{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid rgba(239,231,215,.16);align-items:baseline}
+.i-card{border-top:1px solid rgba(239,231,215,.35);margin:0 0 20px;opacity:0;animation:fade 1s .7s forwards;max-width:600px}
+.i-card>div{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:clamp(7px,1.2vh,12px) 0;border-bottom:1px solid rgba(239,231,215,.16);align-items:baseline}
 .i-card dt{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:#d0574b}
 .i-card dd{font-family:var(--display);font-size:clamp(19px,1.7vw,24px);color:#f3ead9;line-height:1.15}
 .i-card dd span{display:block;font-family:var(--serif);font-size:14px;color:#bfb29b;margin-top:3px}
@@ -98,6 +98,88 @@ a{color:inherit}
 .chip.rsvp{background:var(--red);border-color:var(--red);color:#fff;text-decoration:none}
 .chip.rsvp:hover{background:#7e1c14}
 .chip .short{display:none}
+
+
+/* ---------- partners (landing) ---------- */
+.partners{display:flex;align-items:center;justify-content:center;gap:clamp(22px,4vw,56px);padding:16px clamp(18px,6vw,96px);border-top:1px solid rgba(239,231,215,.14);opacity:0;animation:fade 1s 1.3s forwards}
+.pt-lbl{font-size:10.5px;letter-spacing:.32em;text-transform:uppercase;color:#a99d88}
+.pt{display:block;opacity:.85;transition:opacity .3s,transform .3s}
+.pt:hover{opacity:1;transform:translateY(-2px)}
+.pt img{display:block;width:auto}
+.lg-niro{height:30px}
+.lg-statti{height:52px;filter:brightness(0) invert(.92)}
+.pt-sep{width:1px;height:34px;background:rgba(239,231,215,.25)}
+@media (max-width:860px){
+  .partners{flex-wrap:wrap;gap:14px 28px;padding:16px 18px 18px}
+  .pt-lbl{width:100%;text-align:center}
+  .lg-niro{height:24px}.lg-statti{height:44px}
+}
+
+/* ---------- sponsor pages ---------- */
+.pg.niro{background:#10233a;color:#efe3c4}
+.pg.niro::before{mix-blend-mode:screen;opacity:.07}
+.pg.niro::after{background:radial-gradient(100% 70% at 70% 20%,rgba(226,194,122,.12),transparent 60%)}
+.pg.niro .p-head{border-color:#e2c27a}
+.pg.niro .kicker{border-color:rgba(226,194,122,.6);color:#e2c27a}
+.pg.niro .p-foot{border-color:rgba(226,194,122,.6)}
+.niro-ill{height:215px;margin:12px 0 8px;position:relative;overflow:hidden;border:1px solid rgba(226,194,122,.55)}
+.niro-ill svg{width:100%;height:100%;display:block}
+.niro-ill .moonglow{animation:glow 5s ease-in-out infinite}
+@keyframes glow{50%{opacity:.55}}
+.niro-ill .w1{animation:sea 9s linear infinite}.niro-ill .w2{animation:sea 6s linear infinite}.niro-ill .w3{animation:sea 4s linear infinite}
+.niro-ill .bigship{animation:bob2 4s ease-in-out infinite;transform-origin:250px 160px;transform-box:view-box}
+@keyframes bob2{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg) translateY(-3px)}}
+.niro-ill .star{animation:tw 3s ease-in-out infinite}
+@keyframes tw{50%{opacity:.2}}
+.niro-title{padding:4px 0 2px}
+.niro-title img{height:62px;width:auto}
+.niro-tag{font-family:var(--display);font-style:italic;font-size:20px;padding:6px 0 10px;border-bottom:1.5px solid #e2c27a}
+.pg.niro .cols{margin-top:12px}
+.pg.niro .cols>div+div{border-color:rgba(226,194,122,.6)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);margin-top:12px;border-top:.75px solid currentColor;border-bottom:.75px solid currentColor}
+.facts>div{padding:8px 8px;text-align:center}
+.facts>div+div{border-left:.75px solid currentColor}
+.facts b{display:block;font-family:var(--display);font-style:italic;font-weight:700;font-size:19px;line-height:1.1}
+.facts small{font-size:8.5px;letter-spacing:.26em;text-transform:uppercase;opacity:.85}
+.pg.niro .facts{color:#e2c27a}
+.pg.niro .facts small{color:#efe3c4}
+.sail{display:flex;align-items:center;justify-content:space-between;margin-top:14px;padding:12px 16px;border:1.5px solid #e2c27a;color:#e2c27a;text-decoration:none;position:relative;overflow:hidden;transition:color .4s}
+.sail::before{content:"";position:absolute;inset:0;background:#e2c27a;transform:translateX(-101%);transition:transform .55s cubic-bezier(.7,0,.2,1)}
+.sail:hover{color:#10233a}.sail:hover::before{transform:none}
+.sail>*{position:relative}
+.sail b{font-family:var(--display);font-style:italic;font-weight:600;font-size:21px}
+.sail small{display:block;font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;opacity:.85}
+.sail i{font-style:normal;font-size:22px}
+
+.pg.statti-pg .kicker{color:#6b1c26}
+.st-hero{position:relative;height:250px;margin-top:6px;border-bottom:1.5px solid var(--ink)}
+.st-year{position:absolute;left:150px;top:-4px;font-family:var(--display);font-weight:900;font-size:200px;line-height:1;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1.2px rgba(107,28,38,.35)}
+.st-name{position:absolute;left:40px;bottom:40px;padding:6px 10px 4px 0;}
+.st-name img{height:118px;width:auto}
+.st-tag{position:absolute;left:2px;bottom:14px;font-size:11px;letter-spacing:.36em;text-transform:uppercase;font-weight:600}
+.st-glass{position:absolute;right:16px;top:20px;width:112px;height:180px;color:#1b1814}
+.st-glass .wine{fill:#7d1d2b;animation:pour 6s cubic-bezier(.45,0,.2,1) infinite}
+@keyframes pour{0%,10%{transform:translateY(24px)}45%,80%{transform:translateY(6px)}100%{transform:translateY(24px)}}
+.st-glass .drop{fill:#7d1d2b;animation:drip 6s ease-in infinite}
+@keyframes drip{0%,8%{transform:translateY(-30px);opacity:0}10%{opacity:1}40%{transform:translateY(14px);opacity:1}42%,100%{opacity:0;transform:translateY(14px)}}
+.st-lede{font-style:italic;font-size:17px;padding:10px 0 4px}
+.pg.statti-pg .cols{margin-top:8px}
+.pg.statti-pg .facts{grid-template-columns:repeat(4,1fr);color:#6b1c26;border-top-width:1.5px}
+.pg.statti-pg .facts small{color:var(--ink)}
+.sealbtn{display:grid;grid-template-columns:62px 1fr auto;gap:14px;align-items:center;margin-top:14px;padding:10px 14px 10px 10px;border:1.5px solid #6b1c26;text-decoration:none;color:#6b1c26;transition:background .4s,color .4s}
+.sealbtn:hover{background:#6b1c26;color:#efe7d7}
+.wax{width:58px;height:58px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#a3343f,#6b1c26 60%,#4a1119);display:grid;place-items:center;color:#f0d9b5;font-family:var(--display);font-style:italic;font-weight:700;font-size:28px;box-shadow:inset 0 0 0 4px rgba(0,0,0,.18),inset 0 0 0 5px rgba(240,217,181,.35),0 3px 8px rgba(0,0,0,.25);transition:transform .6s cubic-bezier(.2,1.6,.4,1)}
+.sealbtn:hover .wax{transform:rotate(-20deg) scale(1.06)}
+.sealbtn b{font-family:var(--display);font-style:italic;font-weight:600;font-size:21px;display:block}
+.sealbtn small{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase}
+.sealbtn i{font-style:normal;font-size:22px}
+.bc-partners{margin:4px 0 14px;font-size:9.5px;letter-spacing:.34em;text-transform:uppercase;opacity:.85}
+.bc-partners{display:flex;flex-direction:column;align-items:center;gap:8px}
+.bc-partners .row{display:flex;align-items:center;gap:30px}
+.bc-partners a{display:block;transition:transform .3s}
+.bc-partners a:hover{transform:translateY(-2px)}
+.bcl-niro{height:22px}
+.bcl-statti{height:44px;filter:brightness(0) invert(.92)}
 
 /* ---------- stage ---------- */
 #stage{position:fixed;inset:0;z-index:10;opacity:0;pointer-events:none;transition:opacity 1s ease;display:flex;flex-direction:column;color:#efe7d7}
@@ -428,6 +510,13 @@ a{color:inherit}
       <div class="hero-hint">La rivista della serata · tocca per scoprire di più</div>
     </div>
   </div>
+
+  <div class="partners">
+    <span class="pt-lbl">Partner della serata</span>
+    <a class="pt" href="https://ginniro.it/" target="_blank" rel="noopener" aria-label="Gin Niro"><img class="lg-niro" src="assets/logo-gin-niro.png" alt="Gin Niro"></a>
+    <span class="pt-sep" aria-hidden="true"></span>
+    <a class="pt" href="https://www.statti.com/" target="_blank" rel="noopener" aria-label="Statti"><img class="lg-statti" src="assets/logo-statti.png" alt="Statti 1784"></a>
+  </div>
   <div class="ticker" aria-hidden="true"><div class="tk" id="tk"></div></div>
 </section>
 
@@ -443,7 +532,7 @@ a{color:inherit}
   <div class="viewport" id="vp"><div class="book" id="book"></div></div>
   <div class="s-bot">
     <button class="arrow" id="prev" aria-label="Pagina precedente"><svg width="18" height="12" viewBox="0 0 18 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M18 6H2M7 1L2 6l5 5"/></svg></button>
-    <div class="count" id="count"><b>Copertina</b>01 / 08</div>
+    <div class="count" id="count"><b>Copertina</b>01 / 10</div>
     <button class="arrow" id="next" aria-label="Pagina successiva"><svg width="18" height="12" viewBox="0 0 18 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 6h16M11 1l5 5-5 5"/></svg></button>
     <div class="progress"><i id="prog"></i></div>
   </div>
@@ -456,9 +545,11 @@ a{color:inherit}
   <button data-go="3">In scena: Giuseppe &amp; Luigi <span>03</span></button>
   <button data-go="4">Fuori spartito, il gioco <span>04</span></button>
   <button data-go="5">Il tuo risultato <span>05</span></button>
-  <button data-go="6">L’appuntamento &amp; RSVP <span>06</span></button>
-  <button data-go="7">Guffanti Concept Showroom <span>07</span></button>
-  <button data-go="8">Retro <span>08</span></button>
+  <button data-go="6">Partner: Gin Niro <span>06</span></button>
+  <button data-go="7">Partner: Statti <span>07</span></button>
+  <button data-go="8">L’appuntamento <span>08</span></button>
+  <button data-go="9">Guffanti Concept Showroom <span>09</span></button>
+  <button data-go="10">Retro <span>10</span></button>
 </nav>
 
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Fuori spartito">
@@ -574,6 +665,50 @@ a{color:inherit}
   <div class="p-foot"><span style="width:20px"></span><span>Lobiz Magazine — Edizione speciale</span><span class="n">05</span></div>
 </section>
 
+<!-- 06 GIN NIRO -->
+<section class="pg niro" data-n="6">
+  <div class="p-head"><span class="logo">Lobiz Magazine</span><span class="caps">Partner della serata</span></div>
+  <div class="kicker">Il brindisi · Sicilia</div>
+  <div class="niro-ill"><svg viewBox="0 0 470 215" preserveAspectRatio="xMidYMid slice"><defs><radialGradient id="mg"><stop offset="0" stop-color="#efe3c4" stop-opacity=".55"/><stop offset="1" stop-color="#efe3c4" stop-opacity="0"/></radialGradient></defs><rect width="470" height="215" fill="#0d1d30"/><circle class="star" cx="40" cy="30" r="1.3" fill="#efe3c4" style="animation-delay:0s"/><circle class="star" cx="90" cy="60" r="1" fill="#efe3c4" style="animation-delay:1.2s"/><circle class="star" cx="150" cy="22" r="1.4" fill="#efe3c4" style="animation-delay:0.6s"/><circle class="star" cx="200" cy="48" r="0.9" fill="#efe3c4" style="animation-delay:2s"/><circle class="star" cx="330" cy="30" r="1.1" fill="#efe3c4" style="animation-delay:1.6s"/><circle class="star" cx="460" cy="120" r="1" fill="#efe3c4" style="animation-delay:0.3s"/><circle class="star" cx="430" cy="24" r="1.2" fill="#efe3c4" style="animation-delay:2.4s"/><circle class="star" cx="110" cy="110" r="0.8" fill="#efe3c4" style="animation-delay:1.8s"/><circle class="star" cx="250" cy="18" r="1" fill="#efe3c4" style="animation-delay:0.9s"/><circle class="star" cx="30" cy="90" r="0.9" fill="#efe3c4" style="animation-delay:2.2s"/><circle class="moonglow" cx="390" cy="62" r="62" fill="url(#mg)"/><circle cx="390" cy="62" r="28" fill="#efe3c4"/><circle cx="380" cy="55" r="4" fill="#d9cba6"/><circle cx="398" cy="72" r="3" fill="#d9cba6"/><path d="M370 176h40M360 186h60M375 196h30" stroke="#efe3c4" stroke-width="1.4" opacity=".45"/><path class="w1" d="M0 168 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 V215 H0z" fill="#e2c27a" opacity="0.22"/><g class="bigship" fill="#e2c27a"><path d="M190 158h120l-18 18h-84z"/><path d="M228 72v86M266 60v98M300 92v66" stroke="#e2c27a" stroke-width="2.4" fill="none"/><path d="M231 76q30 32 0 76z" opacity=".95"/><path d="M269 64q38 40 0 88z"/><path d="M302 96q20 22 0 52z" opacity=".85"/><path d="M266 60l16 5-16 5z"/><path d="M192 158l-14-14" stroke="#e2c27a" stroke-width="2" fill="none"/><path d="M226 128h6M262 116h6" stroke="#10233a" stroke-width="2"/></g><path class="w2" d="M0 178 q15 -7 30 0 t30 0 q15 -7 30 0 t30 0 q15 -7 30 0 t30 0 q15 -7 30 0 t30 0 q15 -7 30 0 t30 0 q15 -7 30 0 t30 0 q15 -7 30 0 t30 0 q15 -7 30 0 t30 0 q15 -7 30 0 t30 0 q15 -7 30 0 t30 0 q15 -7 30 0 t30 0 q15 -7 30 0 t30 0 q15 -7 30 0 t30 0 q15 -7 30 0 t30 0 q15 -7 30 0 t30 0 q15 -7 30 0 t30 0 q15 -7 30 0 t30 0 q15 -7 30 0 t30 0 V215 H0z" fill="#e2c27a" opacity="0.35"/><path class="w3" d="M0 192 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 q15 -6 30 0 t30 0 V215 H0z" fill="#e2c27a" opacity="0.6"/></svg></div>
+  <h2 class="niro-title"><img src="assets/logo-gin-niro.png" alt="Gin Niro"></h2>
+  <div class="niro-tag">Zibibbo Vibes. Mediterranean soul.</div>
+  <div class="cols">
+    <div><p class="drop">Un gin artigianale siciliano costruito attorno allo Zibibbo, uva aromatica che raramente si incontra nel mondo del gin. Con lui, agrumi di Sicilia, ginepro, zenzero e spezie.</p></div>
+    <div><p>Ogni botanica viene distillata separatamente. Dietro l’etichetta c’è una leggenda di mare: quella del marinaio William Turner, tra tempeste, isole al chiaro di luna e coste mediterranee.</p></div>
+  </div>
+  <div class="facts">
+    <div><b>Zibibbo</b><small>L’uva aromatica</small></div>
+    <div><b>Una a una</b><small>Botaniche distillate</small></div>
+    <div><b>Argento</b><small>World Gin Awards 2026</small></div>
+  </div>
+  <a class="sail nofl" href="https://ginniro.it/" target="_blank" rel="noopener"><span><b>Salpa con Gin Niro</b><small>ginniro.it</small></span><i>↗</i></a>
+  <div class="p-foot"><span class="n">06</span><span>Lobiz Magazine — Edizione speciale</span><span style="width:20px"></span></div>
+</section>
+
+<!-- 07 STATTI -->
+<section class="pg statti-pg" data-n="7">
+  <div class="p-head"><span class="logo">Lobiz Magazine</span><span class="caps">Partner della serata</span></div>
+  <div class="kicker">Il brindisi · Calabria</div>
+  <div class="st-hero">
+    <div class="st-name"><img src="assets/logo-statti.png" alt="Statti 1784"></div>
+    <div class="st-tag">Storie in vino dal 1784</div>
+    <svg class="st-glass" viewBox="0 0 30 46" aria-hidden="true"><defs><clipPath id="gl2"><path d="M5 4h20q1 19-10 21Q4 23 5 4z"/></clipPath></defs><g clip-path="url(#gl2)"><rect class="wine" x="0" y="4" width="30" height="24"/></g><path d="M5 4h20q1 19-10 21Q4 23 5 4zM15 25v17M8 43.5h14" fill="none" stroke="currentColor" stroke-width="1.4"/><circle class="drop" cx="15" cy="0" r="1.3"/></svg>
+  </div>
+  <div class="st-lede">Due secoli di famiglia nella terra del vino.</div>
+  <div class="cols">
+    <div><p class="drop">Nella piana di Lamezia Terme, in Calabria, la famiglia Statti guida da due secoli una tenuta di circa 500 ettari: ulivi secolari, vigneti e agrumeti.</p></div>
+    <div><p>Nel calice parlano i vitigni del territorio, Mantonico, Greco e Gaglioppo, in una terra che gli antichi chiamavano Enotria Tellus: la terra del vino.</p></div>
+  </div>
+  <div class="facts">
+    <div><b>1784</b><small>Dal</small></div>
+    <div><b>500 ha</b><small>Di tenuta</small></div>
+    <div><b>100 ha</b><small>Di vigneti</small></div>
+    <div><b>Lamezia</b><small>Calabria</small></div>
+  </div>
+  <a class="sealbtn nofl" href="https://www.statti.com/" target="_blank" rel="noopener"><span class="wax">S</span><span><b>Brinda con Statti</b><small>statti.com</small></span><i>↗</i></a>
+  <div class="p-foot"><span style="width:20px"></span><span>Lobiz Magazine — Edizione speciale</span><span class="n">07</span></div>
+</section>
+
 <!-- 06 INFO -->
 <section class="pg" data-n="6">
   <div class="p-head"><span class="logo">Lobiz Magazine</span><span class="caps">L’appuntamento</span></div>
@@ -603,7 +738,7 @@ a{color:inherit}
     <a class="act nofl" id="calLink" href="#" target="_blank" rel="noopener"><span class="n">II</span><span><b>Aggiungi al calendario</b><small>Google Calendar · sabato 28 novembre, ore 19:30</small></span><span class="go">↗</span></a>
     <a class="act nofl" id="mapLink" href="#" target="_blank" rel="noopener"><span class="n">III</span><span><b>Come arrivare</b><small>Via dell’Aprica, 10 · apri in Maps</small></span><span class="go">↗</span></a>
   </div>
-  <div class="p-foot"><span class="n">06</span><span>Lobiz Magazine — Edizione speciale</span><span style="width:20px"></span></div>
+  <div class="p-foot"><span class="n">08</span><span>Lobiz Magazine — Edizione speciale</span><span style="width:20px"></span></div>
 </section>
 
 <!-- 07 AD -->
@@ -622,6 +757,7 @@ a{color:inherit}
   <div class="bc-foot">
     <small>Su invito e a cura di</small>
     <div class="bc-logos"><img src="assets/logo-guffanti.png" alt="Guffanti"><img class="lob" src="assets/logo-lobiz.png" alt="Lobiz"></div>
+    <div class="bc-partners"><span>Partner della serata</span><span class="row"><a href="https://ginniro.it/" target="_blank" rel="noopener" class="nofl" aria-label="Gin Niro"><img class="bcl-niro" src="assets/logo-gin-niro.png" alt="Gin Niro"></a><a href="https://www.statti.com/" target="_blank" rel="noopener" class="nofl" aria-label="Statti"><img class="bcl-statti" src="assets/logo-statti.png" alt="Statti"></a></span></div>
     <small>Vol. 01 · Edizione speciale · Milano, novembre 2026</small>
   </div>
 </section>
@@ -718,7 +854,7 @@ function layout(){
   // hero
   let hs;
   if(vw<860){ hs=Math.min((vh*0.36)/800, (vw*0.5)/520); }
-  else { hs=Math.min((vh*0.66)/800,(vw*0.34)/520); }
+  else { hs=Math.min((vh*0.5)/800,(vw*0.3)/520); }
   r.setProperty("--hs",hs);
   book.classList.toggle("mobile",mobile);
   if(wasMobile!==mobile){
@@ -730,7 +866,8 @@ function layout(){
 
 /* ---------- navigation ---------- */
 let flipped=0, page=1; const TOTAL=pages.length;
-const names=["Copertina","Espresso Doppio","In scena","Fuori spartito","Il tuo risultato","L’appuntamento","Guffanti","Retro"];
+const names=["Copertina","Espresso Doppio","In scena","Fuori spartito","Il tuo risultato","Gin Niro","Statti","L’appuntamento","Guffanti","Retro"];
+const TT=()=>String(TOTAL).padStart(2,"0");
 function setZ(){ leaves.forEach((l,i)=>{ l.style.zIndex = i<flipped ? i+1 : N-i+1; }); }
 let zTimer;
 function apply(instant){
@@ -764,9 +901,9 @@ function apply(instant){
   if(mobile){ label=names[page-1]; num=String(page).padStart(2,"0")+" / "+String(TOTAL).padStart(2,"0"); pct=(page-1)/(TOTAL-1);
     $("#prev").disabled=page<=1; $("#next").disabled=page>=TOTAL; }
   else {
-    if(flipped===0){label=names[0];num="01 / 08";}
-    else if(flipped>=N){label=names[TOTAL-1];num="08 / 08";}
-    else {const a=2*flipped,b=a+1; label=names[a-1]+" · "+names[b-1]; num=String(a).padStart(2,"0")+"–"+String(b).padStart(2,"0")+" / 08";}
+    if(flipped===0){label=names[0];num="01 / "+TT();}
+    else if(flipped>=N){label=names[TOTAL-1];num=TT()+" / "+TT();}
+    else {const a=2*flipped,b=a+1; label=names[a-1]+" · "+names[b-1]; num=String(a).padStart(2,"0")+"–"+String(b).padStart(2,"0")+" / "+TT();}
     pct=flipped/N; $("#prev").disabled=flipped<=0; $("#next").disabled=flipped>=N;
   }
   $("#count").innerHTML=`<b>${label}</b>${num}`;
@@ -824,7 +961,7 @@ addEventListener("pointermove",e=>{ if(entered||matchMedia("(pointer:coarse)").m
   hm.style.transform=`rotateY(${-16+x*14}deg) rotateX(${5-y*10}deg) rotateZ(1.5deg)`; });
 
 /* ticker */
-const tk="<span>Espresso Doppio</span><i>✦</i><span>Giuseppe Antonacci &amp; Luigi Leoni</span><i>✦</i><span>Sabato 28 novembre 2026</span><i>✦</i><span>Trattoria Bel Belè, Milano</span><i>✦</i><span>Una notte di musica senza tempo</span><i>✦</i>";
+const tk="<span>Espresso Doppio</span><i>✦</i><span>Giuseppe Antonacci &amp; Luigi Leoni</span><i>✦</i><span>Sabato 28 novembre 2026</span><i>✦</i><span>Trattoria Bel Belè, Milano</span><i>✦</i><span>Una notte di musica senza tempo</span><i>✦</i><span>Partner della serata: Gin Niro &amp; Statti</span><i>✦</i>";
 $("#tk").innerHTML=tk+tk+tk+tk;
 
 /* ---------- quiz logic ---------- */

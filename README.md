@@ -31,3 +31,6 @@ L'orario del conto alla rovescia è in `Date.UTC(2026,10,28,18,30,0)` (ora UTC: 
 Il bottone "Confermi la tua partecipazione" (nella pagina d'arrivo e a pagina 06) apre il Google Form:
 https://forms.gle/w7vQTcEaVNXJcEpt6
 Per cambiarlo, cerca questo indirizzo in `index.html` e sostituiscilo.
+
+## Partner della serata
+Gin Niro (https://ginniro.it/) e Statti (https://www.statti.com/) compaiono nella fascia partner della pagina d'arrivo, nella doppia pagina 06–07 della rivista e sul retro.
